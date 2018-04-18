@@ -4,8 +4,8 @@ import { render, unmountComponentAtNode } from 'react-dom'
 
 export default class ReactConfirmAlert extends Component {
   static propTypes = {
-    title: PropTypes.string,
-    message: PropTypes.string,
+    title: PropTypes.object,
+    message: PropTypes.object,
     buttons: PropTypes.array.isRequired,
     childrenElement: PropTypes.func,
     customUI: PropTypes.func,
