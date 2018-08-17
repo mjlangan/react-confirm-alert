@@ -1,7 +1,7 @@
 {
-  "name": "react-confirm-alert",
-  "version": "2.0.2",
-  "description": "react component confirm dialog.",
+  "name": "@mjlangan/react-confirm-alert",
+  "version": "2.1.0",
+  "description": "A forked React component confirm dialog with improved accessibility.",
   "main": "lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GA-MO/react-confirm-alert.git"
+    "url": "https://github.com/mjlangan/react-confirm-alert.git"
   },
   "keywords": [
     "react alert example",
@@ -28,12 +28,12 @@
     "dialog",
     "react"
   ],
-  "author": "Thawatchai Kuansombat (thawatchai.deartk@gmail.com)",
+  "author": "Michael Langan (michaell@allenai.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GA-MO/react-confirm-alert/issues"
+    "url": "https://github.com/mjlangan/react-confirm-alert/issues"
   },
-  "homepage": "https://github.com/GA-MO/react-confirm-alert",
+  "homepage": "https://github.com/mjlangan/react-confirm-alert",
   "files": [
     "lib",
     "src/react-confirm-alert.css"
