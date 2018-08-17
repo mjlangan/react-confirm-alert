@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { render, unmountComponentAtNode } from 'react-dom'
+import FocusTrap from 'focus-trap-react'
 
 export default class ReactConfirmAlert extends Component {
   static propTypes = {
@@ -56,27 +57,29 @@ export default class ReactConfirmAlert extends Component {
     const { title, message, buttons, childrenElement, customUI } = this.props
 
     return (
-      <div className='react-confirm-alert-overlay'>
-        <div className='react-confirm-alert'>
-          {customUI
-            ? this.renderCustomUI()
-            : <div className='react-confirm-alert-body'>
-              {title && <h1>{title}</h1>}
-              {message}
-              {childrenElement()}
-              <div className='react-confirm-alert-button-group'>
-                {buttons.map((button, i) => (
-                  <button
-                    key={i}
-                    onClick={() => this.handleClickButton(button)}
-                  >
-                    {button.label}
-                  </button>
-                ))}
-              </div>
-            </div>}
+      <FocusTrap>
+        <div className='react-confirm-alert-overlay'>
+          <div className='react-confirm-alert'>
+            {customUI
+              ? this.renderCustomUI()
+              : <div className='react-confirm-alert-body'>
+                {title && <h1>{title}</h1>}
+                {message}
+                {childrenElement()}
+                <div className='react-confirm-alert-button-group'>
+                  {buttons.map((button, i) => (
+                    <button
+                      key={i}
+                      onClick={() => this.handleClickButton(button)}
+                    >
+                      {button.label}
+                    </button>
+                  ))}
+                </div>
+              </div>}
+          </div>
         </div>
-      </div>
+      </FocusTrap>
     )
   }
 }
